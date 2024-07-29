@@ -1,0 +1,123 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #8394a6;
+    font-family: Arial, sans-serif;
+    background-image: url('background1.jpg');
+}
+
+.product-card {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    margin: 20px;
+}
+
+.product-card > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    transition: transform 0.6s;
+    background: transparent;
+    backdrop-filter: blur(20px);
+}
+
+.card-front, .card-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.card-front img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.details-btn, .back-btn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.details-btn:hover, .back-btn:hover {
+    background-color: #0056b3;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.product-card.show-back .card-front {
+    transform: rotateX(-180deg);
+}
+
+.product-card.show-back .card-back {
+    transform: rotateY(0deg);
+}
+.cart-btn, .back-btn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.cart-btn:hover, .cart-btn:hover {
+    background-color: #008702;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #3b5998;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
